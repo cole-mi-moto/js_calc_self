@@ -11,58 +11,62 @@
     
     <body>
         <div class="calculator">
-            <input type="text" class="calculator-display" value="0" readonly>
+            <div class="calculator-screen">
+                <div class="previous-equation"></div>
+                <div class="current-equation"></div>
+                <input type="text" class="calculator-display" value="0" readonly>
+            </div>
 
             <div class="calculator-buttons">
-                <div class="button-row">
-                    <button class="button function">2nd</button>
-                    <button class="button function">deg</button>
-                    <button class="button function">sin</button>
-                    <button class="button function">cos</button>
-                    <button class="button function">tan</button>
-                </div>
-                <div class="button-row">
-                    <button class="button function">x^y</button>
-                    <button class="button function">lg</button>
-                    <button class="button function">In</button>
-                    <button class="button operator">(</button>
-                    <button class="button operator">)</button>
-                </div>
-                <div class="button-row">
-                    <button class="button function">&radic;x</button>
-                    <button class="button clear">AC</button>
-                    <button class="button backspace">&#x232B</button>
-                    <button class="button operator">%</button>
-                    <button class="button operator">&divide;</button>
-                </div>
-                <div class="button-row">
-                    <button class="button function">x!</button>
-                    <button class="button number">7</button>
-                    <button class="button number">8</button>
-                    <button class="button number">9</button>
-                    <button class="button operator">&times;</button>
-                </div>
-                <div class="button-row">
-                    <button class="button function">1/x</button>
-                    <button class="button number">4</button>
-                    <button class="button number">5</button>
-                    <button class="button number">6</button>
-                    <button class="button operator">-</button>
-                </div>
-                <div class="button-row">
-                    <button class="button constant">&pi;</button>
-                    <button class="button number">1</button>
-                    <button class="button number">2</button>
-                    <button class="button number">3</button>
-                    <button class="button operator">+</button>
-                </div>
-                <div class="button-row">
-                    <button class="button constant">e</button>
-                    <button class="button number" data-value="0">0</button>
-                    <button class="button number">.</button>
-                    <button class="button equals">&equals;</button>
-                </div>
-            </div>
+    <div class="button-row">
+        <button class="button function" id="secondBtn">2nd</button>
+        <button class="button function">deg</button>
+        <button class="button function" id="sinBtn" data-primary-text="sin" data-secondary-text="asin">sin</button>
+        <button class="button function" id="cosBtn" data-primary-text="cos" data-secondary-text="acos">cos</button>
+        <button class="button function" id="tanBtn" data-primary-text="tan" data-secondary-text="atan">tan</button>
+    </div>
+    <div class="button-row">
+        <button class="button function" id="xpyBtn" data-primary-text="xʸ" data-secondary-text="y√x">xʸ</button>
+        <button class="button function" id="lgBtn" data-primary-text="lg" data-secondary-text="10ˣ">lg</button>
+        <button class="button function" id="lnBtn" data-primary-text="ln" data-secondary-text="eˣ">ln</button>
+        <button class="button operator">(</button>
+        <button class="button operator">)</button>
+    </div>
+    <div class="button-row">
+        <button class="button function" id="sqrtBtn" data-primary-text="√x" data-secondary-text="x²">&radic;x</button>
+        <button class="button clear">AC</button>
+        <button class="button backspace"><span class="backspace-icon">&#x232B</span></button>
+        <button class="button operator">%</button>
+        <button class="button operator">&divide;</button>
+    </div>
+    <div class="button-row">
+        <button class="button function">x!</button>
+        <button class="button number">7</button>
+        <button class="button number">8</button>
+        <button class="button number">9</button>
+        <button class="button operator">&times;</button>
+    </div>
+    <div class="button-row">
+        <button class="button function">1/x</button>
+        <button class="button number">4</button>
+        <button class="button number">5</button>
+        <button class="button number">6</button>
+        <button class="button operator">-</button>
+    </div>
+    <div class="button-row">
+        <button class="button constant">&pi;</button>
+        <button class="button number">1</button>
+        <button class="button number">2</button>
+        <button class="button number">3</button>
+        <button class="button operator">+</button>
+    </div>
+    <div class="button-row">
+        <button class="button constant">e</button>
+        <button class="button number" data-value="0">0</button>
+        <button class="button number">.</button>
+        <button class="button equals">&equals;</button>
+    </div>
+</div>
         </div>
         <script src="script.js"></script>
     </body>
